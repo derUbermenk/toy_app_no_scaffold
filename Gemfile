@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'faker'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -34,7 +36,6 @@ group :development, :test do
   gem 'guard' # NOTE: this is necessary in newer versions
   gem 'guard-minitest'
   gem "debug", ">= 1.0.0"
-  gem 'faker'
 end
 
 group :development do
