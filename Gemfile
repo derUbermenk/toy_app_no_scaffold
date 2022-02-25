@@ -33,6 +33,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'guard' # NOTE: this is necessary in newer versions
   gem 'guard-minitest'
+  gem "debug", ">= 1.0.0"
 end
 
 group :development do
