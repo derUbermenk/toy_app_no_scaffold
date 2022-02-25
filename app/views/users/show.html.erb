@@ -1,0 +1,9 @@
+<%= render 'user', user: @user %>
+
+<% if @user.microposts.any? %>
+  <%= render partial: 'microposts/micropost', collection: @user.microposts %>
+<% else %>
+  <i class="no-microposts" style="font-size: 10px">
+    No microposts to show 
+  </i >
+<% end %>

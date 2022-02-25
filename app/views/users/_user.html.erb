@@ -1,0 +1,30 @@
+<div class="user-card" style="background-color:#DDEDEA; margin-top:20px; margin-bottom:20px; padding:10px">
+
+  <div class="user-info">
+      <span class="uname">
+        <%= link_to user.name, user, style: "color:#35455D; text-decoration: none" %>
+      </span><br>
+      <sup style="color:#35455D; text-decoration: none; font-size:10px"> <%= user.email %> </sup>
+      <br>
+  </div>
+
+  <div class="interaction">
+      <%= link_to user do %>
+        <button class="show">
+          Show 
+        </button>
+      <% end %>
+      
+      <%= link_to edit_user_path(user) do %>
+        <button class="edit">
+          Edit 
+        </button>
+      <% end %>
+
+      <%= link_to user, method: :delete, data: {confirm: 'are you sure?' } do %>
+        <button class="delete">
+          Delete 
+        </button>
+      <% end %>
+  </div>
+</div>
