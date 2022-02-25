@@ -34,6 +34,7 @@ group :development, :test do
   gem 'guard' # NOTE: this is necessary in newer versions
   gem 'guard-minitest'
   gem "debug", ">= 1.0.0"
+  gem 'faker'
 end
 
 group :development do
