@@ -1,0 +1,16 @@
+<p id="notice" >
+  <p style="color:#FF7F7F; font-size:10px"> <%= alert %> </p>
+  <p style="font-color:#FF7F7F; font-size:10px"> <%= notice %> </p>
+</p>
+
+<h1>Microposts</h1>
+
+<%= render partial: 'nav' %>
+
+<div class="form" style="background-color:#C3D2D8; padding:10px">
+  <%= render 'form', micropost: Micropost.new, view: 'index' %>
+</div>
+
+<div class="microposts">
+  <%= render partial: 'micropost', collection: @microposts %>
+</div>

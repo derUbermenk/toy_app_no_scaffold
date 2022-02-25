@@ -1,0 +1,32 @@
+<div class="micropost-card" style="background-color:#DDEDEA; margin-top:20px; margin-bottom:20px; padding:10px">
+  <div class="content">
+    <%= micropost.content %> 
+  </div>
+
+  <div class="info">
+    <span class="author">
+      <%= link_to micropost.user.name, micropost.user, style: "color:#35455D; text-decoration: none; font-size:15px" %>
+    </span> <br>
+    <sup class="time" style="font-size:10px"><%= micropost.updated_at.strftime("%H:%M | %b %d") %></sup><br>
+  </div>
+
+  <div class="interaction">
+      <%= link_to micropost do %>
+        <button class="show">
+          Show 
+        </button>
+      <% end %>
+      
+      <%= link_to edit_micropost_path(micropost) do %>
+        <button class="edit">
+          Edit 
+        </button>
+      <% end %>
+
+      <%= link_to micropost, method: :delete, data: {confirm: 'are you sure?' } do %>
+        <button class="delete">
+          Delete 
+        </button>
+      <% end %>
+  </div>
+</div>
