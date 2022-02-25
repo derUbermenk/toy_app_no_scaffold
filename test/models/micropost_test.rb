@@ -16,7 +16,7 @@ class MicropostTest < ActiveSupport::TestCase
   end
 
   test 'invalid when longer than 144' do
-    @micropost.content = Array.new(145, 'a') 
+    @micropost.content = Array.new(145, 'a').join 
     assert_not @micropost.valid?
   end
 
