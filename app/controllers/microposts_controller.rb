@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :set_micropost, only: [:new, :show, :delete, :index]
+  before_action :set_micropost, only: [:new, :show, :destroy, :index]
 
   def index
     @microposts = Micropost.all.includes(:user)
@@ -44,7 +44,7 @@ class MicropostsController < ApplicationController
 
   def set_micropost
     # set a new micropost if no params[:id]
-    @micropost = params[:id] ? Micropost.find(params[:id]).includes(:user) : Micropost.new
+    @micropost = params[:id] ? Micropost.find(params[:id]) : Micropost.new
   end
 
   def micropost_params
